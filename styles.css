@@ -325,35 +325,32 @@ p { margin: 0 0 1em; }
   pointer-events: none;
 }
 
-/* Hero face mark: CSS-crop the logo image to show only the woman silhouette circle */
+/* Hero: show the full logo big on the right side of the hero */
 .hero-face-mark {
   background: transparent;
   box-shadow: none;
-  aspect-ratio: 1/1;
-  max-width: 460px;
-  margin: 0 auto;
-  overflow: hidden;
-  display: block;
-  position: relative;
+  aspect-ratio: auto;
+  max-width: none;
+  margin: 0;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 .hero-face-mark img {
-  /* Logo is 402x158; face circle occupies leftmost ~90px, vertically centered.
-     Scale the image so that the ~90px face fills the ~460px square container:
-     460 / 90 ≈ 5.1, so displayed width = 402 * 5.1 ≈ 2050. Position so face centres. */
-  position: absolute;
+  width: 100%;
   height: auto;
-  width: 510%;      /* 5.1x scale of container width */
-  max-width: none;
-  top: 50%;
-  left: 0;
-  transform: translate(-4.5%, -50%);
+  max-height: 520px;
+  object-fit: contain;
+  display: block;
   filter: brightness(0) invert(1);
-  opacity: 0.95;
-  object-fit: initial;
+  opacity: 0.98;
 }
 .hero-face-mark::after { display: none; }
 @media (max-width: 800px) {
-  .hero-face-mark { max-width: 320px; }
+  .hero-face-mark { padding: 8px; }
+  .hero-face-mark img { max-height: 220px; }
 }
 @media (max-width: 800px) {
   .hero-split .hero-inner {
