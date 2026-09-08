@@ -341,16 +341,15 @@ p { margin: 0 0 1em; }
 .hero-face-mark img {
   width: 100%;
   height: auto;
-  max-height: 520px;
+  max-height: 380px;
   object-fit: contain;
   display: block;
-  filter: brightness(0) invert(1);
-  opacity: 0.98;
+  opacity: 0.85;
 }
 .hero-face-mark::after { display: none; }
 @media (max-width: 800px) {
   .hero-face-mark { padding: 8px; }
-  .hero-face-mark img { max-height: 220px; }
+  .hero-face-mark img { max-height: 180px; }
 }
 @media (max-width: 800px) {
   .hero-split .hero-inner {
